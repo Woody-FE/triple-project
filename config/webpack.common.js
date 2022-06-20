@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 // BundleAnalyzer는 Bundle 최적화 용도로 보통 저는 사용합니다.
@@ -13,6 +14,13 @@ module.exports = {
         use: "babel-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpe?g|gif|jp2|webp)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+        },
+      },
     ],
   },
   plugins: [
@@ -25,7 +33,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "..src/"),
+      "@components": path.resolve(__dirname, "../src/components/"),
+      "@images": path.resolve(__dirname, "../src/assets/images/"),
+      "@utils": path.resolve(__dirname, "../src/utils/"),
     },
     extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
   },
