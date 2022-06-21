@@ -40,7 +40,8 @@ function CountUp({
     const progress = pastTime / duration;
 
     if (pastTime >= duration) {
-      calculateNextCount(1);
+      const nextCount = calculateNextCount(1);
+      setCount(Math.ceil(nextCount));
       cancelAnimationFrame(animationRef.current);
       return;
     }

@@ -1,5 +1,3 @@
-import * as Styles from "./Image.styles";
-
 import google from "@images/badge-google.png";
 import triple from "@images/triple.png";
 import apple from "@images/badge-apple.png";
@@ -18,12 +16,9 @@ export const imageMap: Record<ImageTypes, string> = {
   google,
 };
 
+// 이미지 태그를 활용할 때를 위해 제작
 function Image({ name, width, height }: ImgIconProps) {
-  return (
-    <Styles.ImageContainer>
-      <img src={imageMap[name]} width={width} height={height} alt={name} />
-    </Styles.ImageContainer>
-  );
+  return <img src={imageMap[name]} width={width} height={height} alt={name} />;
 }
 
 export default Image;
