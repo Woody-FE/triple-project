@@ -17,6 +17,9 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
+      "@hooks/*": ["./src/hooks/*"],
+      "@views/*": ["./src/views/*"],
+      "@styles/*": ["./src/styles/*"],
       "@pages/*": ["./src/pages/*"],
       "@base/*": ["./src/base/*"],
       "@common/*": ["./src/components/common/*"],

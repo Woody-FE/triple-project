@@ -1,11 +1,13 @@
-import TripleAppInfo from "@components/TripleAppInfo";
+import * as Styles from "./LandingPage.styles";
 
-const LandingPage = () => {
+import { AppInfomation } from "@views/index";
+
+function LandingPage() {
   return (
-    <div>
-      <TripleAppInfo />
-    </div>
+    <Styles.Container>
+      <AppInfomation />
+    </Styles.Container>
   );
-};
+}
 
 export default LandingPage;

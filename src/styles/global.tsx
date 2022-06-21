@@ -11,7 +11,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   `;
 
-export const Layout = styled.main`
-  max-width: 1200px;
+export const Layout = styled.div`
   margin: 0 auto;
 `;

@@ -33,6 +33,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      "@hooks": path.resolve(__dirname, "../src/hooks/"),
+      "@views": path.resolve(__dirname, "../src/views/"),
+      "@styles": path.resolve(__dirname, "../src/styles/"),
       "@pages": path.resolve(__dirname, "../src/pages/"),
       "@common": path.resolve(__dirname, "../src/components/common/"),
       "@base": path.resolve(__dirname, "../src/base/"),

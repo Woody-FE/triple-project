@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import { Base } from "./Text.styles";
+import * as Styles from "./Text.styles";
 
 export type TextElemType = "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
 type SizeList = "sm" | "nm" | "lg";
@@ -11,12 +11,12 @@ export interface TextProps {
   customFontSize?: number;
 }
 
-const Text = ({
+function Text({
   tagName = "p",
   size = "nm",
   customFontSize,
   children,
-}: PropsWithChildren<TextProps>) => {
+}: PropsWithChildren<TextProps>) {
   const sizeMap: Record<SizeList, number> = {
     sm: 14,
     nm: 15,
@@ -24,10 +24,10 @@ const Text = ({
   };
   const fontSize = customFontSize || sizeMap[size];
   return (
-    <Base as={tagName} tagName={tagName} fontSize={fontSize}>
+    <Styles.Base as={tagName} tagName={tagName} fontSize={fontSize}>
       {children}
-    </Base>
+    </Styles.Base>
   );
-};
+}
 
 export default Text;

@@ -1,5 +1,4 @@
-import { GlobalStyles, Layout } from "./App.styles";
-
+import { GlobalStyles, Layout } from "@styles/global";
 import { LandingPage } from "@pages/index";
 
 function App() {
