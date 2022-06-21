@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
-import withText from "@common/withText/withText";
+import withText from "@common/withText";
 
 interface AnimationTime {
   duration: number;
