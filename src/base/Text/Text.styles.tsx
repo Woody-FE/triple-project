@@ -26,20 +26,24 @@ export const Base = styled.p<BaseProps>`
         `;
       case "h4":
         return `
-            font-weight: 600;
+            font-weight: bold;
         `;
       case "h5":
         return `
-            font-weight: 500;
+            font-weight: bold;
+            color: rgba(58, 58, 58, 0.8);
+            line-height: 22px;
         `;
       case "p":
         return `
             font-weight: normal;
+            color:rgb(58, 58, 58);
             letter-spacing: -1px;
         `;
-      case "pre":
+      case "span":
         return `
-            font-weight: bold;
+            font-weight: normal;
+            color: rgba(58, 58, 58, 0.7);
       `;
       default:
         return "";

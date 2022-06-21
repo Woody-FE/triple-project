@@ -9,6 +9,10 @@ interface CountUpProps {
   delay?: number;
 }
 
+/*
+  start 지점을 받고, end 지점까지 duration 동안 변화하도록 기능 구현
+  늦게 동작하고 싶을 시에 delay을 주면 해당 시간만큼 지연 후에 동작
+*/
 const CountUp = ({
   start = 0,
   end,
@@ -19,6 +23,7 @@ const CountUp = ({
   const animationRef = useRef(0);
   const startRef = useRef(0);
 
+  // 시작점이 있고 거기서부터 증가하게 하는 함수
   const calculateNextCount = (n: number) => {
     const gap = end - start;
     return start + gap * n;

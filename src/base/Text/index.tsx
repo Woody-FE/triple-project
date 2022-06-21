@@ -2,10 +2,10 @@ import { PropsWithChildren } from "react";
 
 import { Base } from "./Text.styles";
 
-export type TextElemType = "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "pre";
+export type TextElemType = "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
 type SizeList = "sm" | "nm" | "lg";
 
-interface TextProps {
+export interface TextProps {
   tagName?: TextElemType;
   size?: SizeList;
   customFontSize?: number;
